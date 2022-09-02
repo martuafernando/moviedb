@@ -1,4 +1,4 @@
 import './style/layout.scss';
-import image from '/src/asset/png/Sonic_the_Movie_Logo.png'
+import './asset/png/Sonic_the_Movie_Logo.png'
 
-document.addEventListener('DOMContentLoaded', main);
+// document.addEventListener('DOMContentLoaded', main);
