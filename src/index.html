@@ -1,32 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skeleg Movie</title>
+  <title>MARTUA Movie Database</title>
 </head>
+
 <body>
-  <div class="flex">
+  <div class="flex gap-5">
     <div>
-      <img src="../asset/png/Logo.png" width="300" alt="">
+      <img src="../asset/png/Logo.png" width="200" alt="">
       <nav>
-        <ul>
-          <li class="">
-            <a href="">Menu</a>
-            <ul class="dropdown-menu">
-              <li>
-                <i class="fa-solid fa-house"></i>
-                <a class="dropdown-item" href="#">Home</a>
-              </li>
-              <li><a class="dropdown-item" href="#">Community</a></li>
-              <li><a class="dropdown-item" href="#">Discovery</a></li>
-              <li><a class="dropdown-item" href="#">Coming Soom</a></li>
-            </ul>
-          </li>
-        </ul>
+        <div class="vertical-menu">
+          <p>Menu</p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-house"></i>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-people-group"></i>
+              <a href="#">Community</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-compass"></i>
+              <a href="#">Discovery</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-hourglass-half"></i>
+              <a href="#">Coming Soom</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="vertical-menu">
+          <p>Social</p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-user"></i>
+              <a href="#">Friends</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-users"></i>
+              <a href="#">Parties</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-play"></i>
+              <a href="#">Media</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="vertical-menu">
+          <p>General</p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-gear"></i>
+              <a href="#">Setting</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <a href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
-  </div>  
+    <div class="grow-1">
+      <div class="horizontal-menu">
+          <a>TV Series</a>
+          <a>Movies</a>
+          <a>Animes</a>
+      </div>
+      <img src="../asset/jpg/image.jpg" width="100%" alt="">
+      <img src="../asset/jpg/people.jpg" width="100" alt="">
+    </div>
+    <div>
+      <div class="search-field flex gap-2 align-center">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="" type="text" name="" id="" placeholder="Search">
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

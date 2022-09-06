@@ -1,8 +1,16 @@
 // Style
-import './style/style.css';
+import './style/style.scss';
+import './style/component/vertical-menu.scss';
+import './style/component/horizontal-menu.scss';
+import './style/component/search-field.scss';
 
 // Logo
 import '../asset/png/Logo.png'
+
+// Image
+import '../asset/jpg/image.jpg'
+import '../asset/jpg/people.jpg'
+
 
 // FontAwesome
 import '@fortawesome/fontawesome-free/js/fontawesome'

@@ -1,0 +1,18 @@
+.vertical-menu{
+  margin-top: 64px;
+
+  & > p{
+    margin-bottom: 32px;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  li{
+    margin-bottom: 16px;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+}

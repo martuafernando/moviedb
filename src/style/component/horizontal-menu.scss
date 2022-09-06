@@ -1,0 +1,9 @@
+.horizontal-menu{
+  text-decoration: none;
+  a{
+    color: inherit;
+  }
+  & a:not(:first-of-type){
+    margin: 16px;
+  }
+}

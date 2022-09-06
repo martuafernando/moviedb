@@ -1,0 +1,13 @@
+.search-field{
+  input[type=text]{
+    background: none;
+    border: none;
+  }
+  input[type=text]:focus{
+    outline: none;
+  }
+
+  padding: 16px;
+  border: 1px solid #fff;
+  border-radius: 50rem;
+}

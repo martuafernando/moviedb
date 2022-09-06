@@ -10,13 +10,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/,
         use: [
-          'style-loader', 'css-loader', 'postcss-loader'
+          'style-loader', 'css-loader', 'sass-loader'
         ]
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|jpg|png|gif|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[path][name].[ext]',
