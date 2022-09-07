@@ -1,18 +1,41 @@
+@import './src/style/default.scss';
+
 .vertical-menu{
   margin-top: 64px;
 
+  .active{
+    color: $white-color;
+    position: relative;
+    font-weight: 600;
+
+    &::after{
+      content: "";
+      display: block;
+      width: 4px;
+      height: 24px;
+      background-color: $red-color;
+      border-radius: 50rem;
+      position: absolute;
+      top: 0;
+      right: calc(-2vw - 3px);
+    }
+  }
+
   & > p{
-    margin-bottom: 32px;
+    margin-bottom: 36px;
+    color: $grey-color;
+    font-weight: 500;
   }
-  ul{
-    list-style: none;
-    padding: 0;
-  }
-  li{
-    margin-bottom: 16px;
-  }
+
   a{
+    margin-bottom: 24px;
+    display: block;
     text-decoration: none;
-    color: inherit;
+    color: $grey-color;
+
+    svg{
+      width: 16px;
+      margin-right: 8px;
+    }
   }
 }

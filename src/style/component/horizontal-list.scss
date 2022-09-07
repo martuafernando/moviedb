@@ -1,0 +1,61 @@
+@import './src/style/default.scss';
+
+.best-artist{
+  margin-top: 48px;
+
+  .title-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    h3{
+      font-size: $font-size-5;
+    }
+
+    a{
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      border-radius: 100%;
+      background-color: rgba($color: $grey-color, $alpha: 0.6);
+      color: $white-color;
+    }
+  }
+
+  .horizontal-list{
+    display: flex;
+    gap: 2vw;
+  
+    .list-item{
+      position: relative;
+    
+      img{
+        display: block;
+        border-radius: 16px;
+        object-fit: cover;
+      }
+    
+      .deskripsi{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        p{
+          margin: 0;
+        }
+        .rating{
+          margin-top: 4px;
+          margin-bottom: 12px;
+          font-size: $font-size-small;
+          color: $yellow-color;
+        }
+      }
+    }
+  }
+}

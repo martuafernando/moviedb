@@ -1,31 +1,15 @@
-/* ====== Color Variable ====== */
-$primary-color: #191B1F;
-$red-color: #D12F26;
-$grey-color: #6F7788;
-$white-color: #F5F9FF;
+@import './src/style/default.scss';
 
-/* ====== End Of Color Variable ====== */
-
-/* ====== Font ====== */
-
-h1, .h1{
-  font-size: 54px;
+body, html{
+  margin: 0;
+  padding: 0;
 }
-
-h2, .h2{
-  font-size: 36px;
-}
-
-h3, .h3{
-  font-size: 24px;
-}
-
-/* ====== End Of Font ====== */
 
 body{
-  font-size: 16;
+  font-size: 16px;
   font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 48px;
+  background-color: $primary-color;
+  color: $white-color;
 }
 
 .flex{
@@ -36,30 +20,6 @@ body{
   flex-grow: 1;
 }
 
-.align-center{
-  align-items: center;
-}
-
-.gap-0 {
-  gap: 0;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-3 {
-  gap: 1rem;
-}
-
-.gap-4 {
-  gap: 1.5rem;
-}
-
-.gap-5 {
-  gap: 3rem;
+hr{
+  border: 1px solid rgba($color: $white-color, $alpha: 0.1)
 }

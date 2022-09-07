@@ -1,0 +1,54 @@
+@import './src/style/default.scss';
+
+.header-image{
+  position: relative;
+  
+  .deskripsi{
+    position: absolute;
+    bottom: 2vw;
+    left: 2vw;
+
+    .h2{
+      margin: 0;
+      font-size: $font-size-2;
+      font-weight: 700;
+    }
+    p{
+      margin: 0 0 1vw 0;
+    }
+    a{
+      display: inline-block;
+      font-weight: 500;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .button-watch{
+      padding: 16px 32px;
+      background-color: $red-color;
+      margin-right: 8px;
+    }
+    .button-add{
+      padding: 16px 20px;
+      background-color: rgba($color: $grey-color, $alpha: 0.6)
+    }
+  }
+
+  .button-right{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    width: 4vw;
+    height: 4vw;
+    line-height: 4vw;
+    text-align: center;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background-color: rgba($color: $grey-color, $alpha: 0.6);
+    color: $white-color;
+  }
+
+  img{
+    border-radius: 2rem;
+  }
+}

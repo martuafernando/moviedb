@@ -1,9 +1,21 @@
+@import './src/style/default.scss';
+
 .horizontal-menu{
-  text-decoration: none;
+  margin-bottom: 24px;
+  
+  .active{
+    color: $white-color;
+    font-weight: 600;
+  }
+  
   a{
-    color: inherit;
+    color: $grey-color;
+    text-decoration: none;
+  }
+  & :first-of-type{
+    margin-right: 8px;
   }
   & a:not(:first-of-type){
-    margin: 16px;
+    margin: 8px;
   }
 }

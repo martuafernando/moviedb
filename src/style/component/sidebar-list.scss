@@ -1,0 +1,54 @@
+@import './src/style/default.scss';
+
+.sidebar-list{
+  margin-top: 36px;
+  & > p{
+    font-size: $font-size-5;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  & > a{
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 24px;
+    background-color: $red-color;
+    text-decoration: none;
+    color: $white-color;
+  }
+
+  .list-item{
+    display: flex;
+    position: relative;
+    gap: 16px;
+    margin-top: 16px;
+  
+    img{
+      display: block;
+      border-radius: 16px;
+      height: 80px;
+      width: 60px;
+      object-fit: cover;
+    }
+  
+    p{
+      padding: 0;
+      margin: 0;
+    }
+  
+    .title{
+      font-weight: 600;
+    }
+    .genre{
+      color: $grey-color;
+    }
+  
+    .rating{
+      position: absolute;
+      bottom: 8px;
+      color: $yellow-color;
+    }
+  }
+}

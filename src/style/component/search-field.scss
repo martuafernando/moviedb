@@ -1,13 +1,25 @@
+@import './src/style/default.scss';
+
 .search-field{
   input[type=text]{
     background: none;
     border: none;
+    color: $white-color;
+    font-size: 16px;
   }
+
+  input{
+    margin-left: 8px;
+  }
+
   input[type=text]:focus{
     outline: none;
   }
 
-  padding: 16px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 16px 0 16px 24px;
   border: 1px solid #fff;
   border-radius: 50rem;
 }
