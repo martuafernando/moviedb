@@ -1,7 +1,7 @@
 @import './src/style/default.scss';
 
-.best-artist{
-  margin-top: 48px;
+.movie-list{
+  margin-top: 64px;
 
   .title-menu{
     display: flex;
@@ -11,6 +11,7 @@
 
     h3{
       font-size: $font-size-5;
+      font-weight: 500;
     }
 
     a{
@@ -20,35 +21,46 @@
       line-height: 48px;
       text-align: center;
       border-radius: 100%;
-      background-color: rgba($color: $grey-color, $alpha: 0.6);
+      border: 2px solid $grey-color;
       color: $white-color;
+    }
+
+    .menu a:first-child{
+      margin-right: 8px;
     }
   }
 
   .horizontal-list{
     display: flex;
     gap: 2vw;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   
     .list-item{
-      position: relative;
     
       img{
         display: block;
         border-radius: 16px;
         object-fit: cover;
+        width: 136px;
       }
     
       .deskripsi{
-        position: absolute;
+        margin-top: 24px;
         width: 100%;
         text-align: center;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
 
         p{
           margin: 0;
         }
+
+        & p:nth-child(2){
+          color: $grey-color;
+        }
+
         .rating{
           margin-top: 4px;
           margin-bottom: 12px;

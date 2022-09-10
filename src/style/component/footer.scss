@@ -1,0 +1,29 @@
+@import './src/style/default.scss';
+
+footer{
+  padding: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $black-color;
+
+  .image{
+    width: 200px;
+  }
+
+  ul{
+    list-style: none;
+
+    li{
+      margin: 0;
+    }
+  }
+
+  .media-sosial{
+    a{
+      font-size: $font-size-3;
+      color: $white-color;
+      margin-left: 16px;
+    }
+  }
+}
