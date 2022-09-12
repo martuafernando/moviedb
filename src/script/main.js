@@ -28,3 +28,21 @@ for (const ele of element) {
     
     ele.addEventListener('mousedown', mouseDownHandler);   
 }
+
+const buttonRight = document.getElementsByClassName('button-right');
+for(const button of buttonRight){
+  button.addEventListener('click', e =>{
+    e.preventDefault();
+    const list = button.parentElement.parentElement.nextElementSibling;
+    list.scrollLeft += list.clientWidth;
+  });
+}
+
+const buttonLeft = document.getElementsByClassName('button-left');
+for(const button of buttonLeft){
+  button.addEventListener('click', e =>{
+    e.preventDefault();
+    const list = button.parentElement.parentElement.nextElementSibling;
+    list.scrollLeft -= list.clientWidth;
+  });
+}
