@@ -25,6 +25,7 @@ import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
 // Script
-import './script/main.js'
+import './script/dom.js'
+import './script/api.js'
 
 // document.addEventListener('DOMContentLoaded', main);

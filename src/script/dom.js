@@ -53,8 +53,6 @@ for(const button of carouselLeft){
     e.preventDefault();
     const list = button.parentElement.parentElement;
     list.scrollLeft -= list.clientWidth;
-    console.log(list.scrollLeft);
-    console.log(list.scrollWidth - list.scrollLeft);
   });
 }
 
@@ -64,7 +62,5 @@ for(const button of carouselRight){
     e.preventDefault();
     const list = button.parentElement.parentElement;
     list.scrollLeft += list.clientWidth;
-    console.log(list.scrollLeft);
-    console.log(list.scrollWidth - list.scrollLeft);
   });
 }
