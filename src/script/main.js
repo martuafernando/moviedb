@@ -46,3 +46,25 @@ for(const button of buttonLeft){
     list.scrollLeft -= list.clientWidth;
   });
 }
+
+const carouselLeft = document.getElementsByClassName('carousel__prev');
+for(const button of carouselLeft){
+  button.addEventListener('click', e =>{
+    e.preventDefault();
+    const list = button.parentElement.parentElement;
+    list.scrollLeft -= list.clientWidth;
+    console.log(list.scrollLeft);
+    console.log(list.scrollWidth - list.scrollLeft);
+  });
+}
+
+const carouselRight = document.getElementsByClassName('carousel__next');
+for(const button of carouselRight){
+  button.addEventListener('click', e =>{
+    e.preventDefault();
+    const list = button.parentElement.parentElement;
+    list.scrollLeft += list.clientWidth;
+    console.log(list.scrollLeft);
+    console.log(list.scrollWidth - list.scrollLeft);
+  });
+}
