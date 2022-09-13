@@ -11,7 +11,7 @@ for (const ele of element) {
             x: e.clientX,
             y: e.clientY,
         };
-    
+        
         document.addEventListener('mousemove', mouseMoveHandler);
         document.addEventListener('mouseup', mouseUpHandler);
     };
