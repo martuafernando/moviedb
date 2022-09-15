@@ -10,10 +10,35 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/,
+        test: /\.styles.scss$/,
+        exclude: /node_modules/,
         use: [
-          'style-loader', 'css-loader', 'sass-loader'
-        ]
+          "sass-to-string",
+          {
+            loader: "sass-loader",
+            // options: {
+            //   sassOptions: {
+            //     outputStyle: "compressed",
+            //   },
+            // },
+          },
+        ],
+      },
+      {
+        test: /\.(scss|css)$/,
+        // Excluding the `.styles.scss` extension
+        exclude: [/\.styles.scss$/, /node_modules/],
+        use: [
+          "style-loader", "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                outputStyle: "compressed",
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.(jpe?g|jpg|png|gif|svg)$/,

@@ -1,13 +1,12 @@
 @import './src/style/default.scss';
 
-.vertical-menu{
-  margin-top: 64px;
-
+:host{
+  
   .active{
     color: $white-color;
     position: relative;
     font-weight: 600;
-
+    
     &::after{
       content: "";
       display: block;
@@ -20,8 +19,9 @@
       right: calc(-2vw - 3px);
     }
   }
-
+  
   & > p{
+    margin-top: 64px;
     margin-bottom: 36px;
     color: $grey-color;
     font-weight: 500;
@@ -33,8 +33,9 @@
     text-decoration: none;
     color: $grey-color;
 
-    svg{
+    svg, path{
       width: 16px;
+      height: 16px;
       margin-right: 8px;
     }
   }

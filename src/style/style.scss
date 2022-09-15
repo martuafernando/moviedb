@@ -32,6 +32,19 @@ body > .flex{
   margin-right: auto;
 }
 
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: $black-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $red-color;
+  border-radius: 50rem;
+}
+
 // Small devices
 @media (max-width: 576px) {
   .header-image{

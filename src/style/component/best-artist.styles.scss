@@ -1,9 +1,9 @@
 @import './src/style/default.scss';
 
-.movie-list{
-  margin-top: 64px;
-
+:host{
+  
   .title-menu{
+    margin-top: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,6 +16,7 @@
 
     a{
       display: inline-block;
+      box-sizing: border-box;
       width: 48px;
       height: 48px;
       line-height: 48px;
@@ -23,6 +24,19 @@
       border-radius: 100%;
       border: 2px solid $grey-color;
       color: $white-color;
+
+      svg, path{
+        width: 16px;
+        height: 16px;
+      }
+      
+      &:hover{
+        background-color: $grey-color;
+      }
+
+      &:active{
+        background-color: $black-color;
+      }
     }
 
     .menu a:first-child{
@@ -34,13 +48,14 @@
     display: flex;
     gap: 2vw;
     overflow: auto;
-    scroll-behavior: smooth;
+    scroll-behavior:auto;
 
     &::-webkit-scrollbar {
       display: none;
     }
   
     .list-item{
+      position: relative;
     
       img{
         display: block;
@@ -50,18 +65,16 @@
       }
     
       .deskripsi{
-        margin-top: 24px;
+        position: absolute;
         width: 100%;
         text-align: center;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
 
         p{
           margin: 0;
         }
-
-        & p:nth-child(2){
-          color: $grey-color;
-        }
-
         .rating{
           margin-top: 4px;
           margin-bottom: 12px;

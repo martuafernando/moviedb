@@ -1,13 +1,5 @@
 // Style
 import './style/style.scss';
-import './style/component/vertical-menu.scss';
-import './style/component/horizontal-menu.scss';
-import './style/component/search-field.scss';
-import './style/component/header-image.scss';
-import './style/component/sidebar-list.scss';
-import './style/component/artist-list.scss';
-import './style/component/movie-list.scss';
-import './style/component/scrollbar.scss';
 import './style/component/footer.scss';
 
 // Logo
@@ -24,8 +16,16 @@ import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
-// Script
-import './script/dom.js'
+// Script 
 import './script/api.js'
+
+// Component
+import './script/component/carousel-image';
+import './script/component/best-artist';
+import './script/component/movie-list';
+import './script/component/horizontal-menu';
+import './script/component/search-field';
+import './script/component/sidebar-list';
+import './script/component/vertical-menu';
 
 // document.addEventListener('DOMContentLoaded', main);

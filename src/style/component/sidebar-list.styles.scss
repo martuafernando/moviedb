@@ -1,8 +1,8 @@
 @import './src/style/default.scss';
 
-.sidebar-list{
-  margin-top: 36px;
+:host{
   & > p{
+    margin-top: 36px;
     font-size: $font-size-5;
     font-weight: 500;
     margin-bottom: 24px;
@@ -51,6 +51,11 @@
       position: absolute;
       bottom: 8px;
       color: $yellow-color;
+
+      svg{
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 }

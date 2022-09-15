@@ -1,0 +1,45 @@
+@import './src/style/default.scss';
+
+:host{
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    gap: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 36px;
+
+    cursor:grab;
+    
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $black-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $red-color;
+    border-radius: 50rem;
+  }
+
+  .button{
+    color: $white-color;
+    svg{
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .active{
+    color: $white-color;
+    font-weight: 600;
+  }
+  
+  a{
+    display: block;
+    color: $grey-color;
+    text-decoration: none;
+  }
+
+}
