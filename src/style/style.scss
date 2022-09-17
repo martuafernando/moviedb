@@ -26,7 +26,7 @@ hr{
   margin: 0;
 }
 
-body > .flex{
+body > .flex, footer > .container{
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -47,47 +47,9 @@ body > .flex{
 
 // Small devices
 @media (max-width: 576px) {
-  .header-image{
-    .button-right{
-      display: none;
-    }
-    .deskripsi{
-      margin-top: 24px;
-      position: static!important;
-      text-align: center;
-
-      p:nth-child(2){
-        margin-bottom: 24px!important;
-      }
-
-      .h2{
-        font-size: $font-size-3!important;
-      }
-    }
-  }
 
   .right-sidebar{
     display: block!important;
-
-    .sidebar-list{
-      margin-bottom: 96px!important;
-      & > p{
-        text-align: center;
-        margin-bottom: 48px!important;
-      }
-
-      & > a{
-        max-width: 180px;
-      }
-    }
-
-    .list-item{
-      justify-content: center;
-    }
-  }
-
-  .rating{
-    width: fit-content!important;
   }
   
   footer{
@@ -116,14 +78,9 @@ body > .flex{
     justify-content: space-around;
     gap: 64px;
     margin-bottom: 64px;
-
-    .rating{
-      width: max-content;
-    }
-
-    .search-field{
-      display: none;
-    }
+  }
+  search-field{
+    display: none;
   }
 }
 

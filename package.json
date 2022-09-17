@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "lint:scripts": "eslint --fix --ext .js --ignore-path .gitignore"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^5.0.0",
+    "eslint": "^8.23.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "sass": "^1.54.8",

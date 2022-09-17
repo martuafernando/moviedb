@@ -210,3 +210,28 @@ li {
 .carousel__next {
   right: 1rem;
 }
+
+@media (max-width: 576px) {
+  .carousel{
+    height: 140px;
+
+    .carousel__prev,
+    .carousel__next {
+      top: 15%;
+      transform: translateY(-50%);
+    }
+
+    .deskripsi{
+      position: static!important;
+      text-align: center;
+  
+      p:nth-child(2){
+        margin-bottom: 24px!important;
+      }
+  
+      .h2{
+        font-size: $font-size-4!important;
+      }
+    }
+  }
+}
