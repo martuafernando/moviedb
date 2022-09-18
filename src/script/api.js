@@ -1,7 +1,7 @@
 class Api {
   apiKey = 'api_key=f840b1b9ca749f93dd7bc7320bf2df65';
   baseUrl = 'https://api.themoviedb.org/3'
-  imageBaseUrl = 'https://image.tmdb.org/t/p/w300/9f5sIJEgvUpFv0ozfA6TurG4j22.jpg'
+  imageBaseUrl = 'https://image.tmdb.org/t/p/w300'
 
   getData(url, processData, extParameter = ''){
     fetch(`${this.baseUrl}${url}?${this.apiKey}${extParameter}`, { 
@@ -25,8 +25,12 @@ class Api {
     this.getData(`/genre/movie/list`, processData);
   };
 
-  getQuery = (keyword, processData) => {
-    this.getData(`/search/movie`, processData);
+  getNowPlaying = (processData) => {
+    this.getData(`/movie/now_playing`, processData);
+  };
+
+  getPerson = (keyword, processData) => {
+    this.getData(`/search/person`, processData, `&query=${keyword}`);
   };
 
   getMoviesByGenre = (genre, processData) => {

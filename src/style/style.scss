@@ -52,7 +52,7 @@ body > .flex, footer > .container{
     display: block!important;
   }
   
-  footer{
+  footer > .container{
     flex-direction: column;
     gap: 16px;
   }

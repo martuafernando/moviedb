@@ -10,43 +10,22 @@ class HorizontalMenu extends HTMLElement{
     this.shadowRoot.appendChild(style);
   }
 
-  connectedCallback() {
+  set genre(genre){
+    this._genre = genre;
     this.render();
   }
 
+  get activeGenre(){
+    return this.shadowDOM.querySelector('a.active').textContent;
+  }
+
   render(){
-    this.shadowDOM.innerHTML += `
-        <a href="" class="active">Movies</a>
-        <a href="">TV Series</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-        <a href="">Animes</a>
-    `;
+    this._genre.forEach(element => {
+      this.shadowDOM.innerHTML += `
+          <a href="#">${element.name}</a>
+      `;
+    });
+    this.shadowDOM.querySelector('a').classList.add('active');
   }
 }
 

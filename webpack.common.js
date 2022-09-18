@@ -16,11 +16,11 @@ module.exports = {
           "sass-to-string",
           {
             loader: "sass-loader",
-            // options: {
-            //   sassOptions: {
-            //     outputStyle: "compressed",
-            //   },
-            // },
+            options: {
+              sassOptions: {
+                outputStyle: "compressed",
+              },
+            },
           },
         ],
       },

@@ -18,6 +18,7 @@ import '@fortawesome/fontawesome-free/js/brands'
 
 // Script 
 import './script/api.js'
+import mainScript from './script/main'
 
 // Component
 import './script/component/carousel-image';
@@ -28,4 +29,4 @@ import './script/component/search-field';
 import './script/component/sidebar-list';
 import './script/component/vertical-menu';
 
-// document.addEventListener('DOMContentLoaded', main);
+document.addEventListener('DOMContentLoaded', mainScript);

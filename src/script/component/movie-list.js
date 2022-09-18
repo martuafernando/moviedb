@@ -11,169 +11,44 @@ class MovieList extends HTMLElement{
     this.shadowRoot.appendChild(style);
   }
 
-  connectedCallback(){
+  set movie(movie){
+    this._movie = movie;
     this.render();
   }
   
   render(){
     this.shadowDOM.innerHTML +=`
-    <div class="title-menu">
-        <h3>Popular Movie</h3>
+      <div class="title-menu">
+        <h3>Now Playing</h3>
         <div class="menu">
           <a class="button-left" href="">${icon({iconName: 'chevron-left' }).html[0]}</i></a>
           <a class="button-right" href="">${icon({iconName: 'chevron-right' }).html[0]}</i></a>
         </div>
-      </div>
-      <div class="horizontal-list">
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Satu</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
+      </div>`
 
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Dua</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
+    const horizontalList = document.createElement('div');
+    horizontalList.classList.add('horizontal-list');
 
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Tiga</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Empat</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Lima</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Enam</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Tujuh</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Delapan</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Sembilan</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
-        <div class="list-item">
-          <img src="../asset/jpg/artist.jpg" width="100%" alt="" draggable="false">
-          <div class="deskripsi">
-            <p>Sepuluh</p>
-            <p>Action, Drama</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
+    this._movie.forEach(movie => {
+      horizontalList.innerHTML += `
+      <div class="list-item">
+        <img src="https://image.tmdb.org/t/p/w300${movie.poster_path}" width="100%" alt="" draggable="false">
+        <div class="deskripsi">
+          <p>${movie.title}</p>
+          <p>${movie.release_date}</p>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
           </div>
         </div>
       </div>
-    `;
+      `
+    });
+
+    this.shadowDOM.appendChild(horizontalList);
 
     const element = this.shadowDOM.querySelectorAll('.horizontal-list');
     let pos = { top: 0, left: 0, x: 0, y: 0 };

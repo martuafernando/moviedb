@@ -62,24 +62,24 @@
         border-radius: 16px;
         object-fit: cover;
         width: 136px;
+        height: 100%;
+        filter: brightness(0.7);
+
+        &:hover{
+          filter: brightness(1);
+        }
       }
     
       .deskripsi{
         position: absolute;
         width: 100%;
         text-align: center;
-        bottom: 0;
+        bottom: 8px;
         left: 50%;
         transform: translateX(-50%);
 
         p{
           margin: 0;
-        }
-        .rating{
-          margin-top: 4px;
-          margin-bottom: 12px;
-          font-size: $font-size-small;
-          color: $yellow-color;
         }
       }
     }

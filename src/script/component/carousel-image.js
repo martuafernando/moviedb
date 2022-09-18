@@ -11,71 +11,44 @@ class CarouselImage extends HTMLElement{
     this.shadowRoot.appendChild(style);
   }
 
-  connectedCallback() {
+  set movie(movie){
+    this._movie = movie;
     this.render();
   }
 
   render() {
-    this.shadowDOM.innerHTML += `
-      <div class="carousel" aria=label=""Gallery>
-        <ol class="carousel__viewport horizontal-list">
-          <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-            <div class="carousel__snapper"></div>
-              <a href="#" class="carousel__next">${icon({iconName: 'chevron-right' }).html[0]}</a>
-            <div class="list-item">
-              <img src="../asset/jpg/image.jpg" width="100%" alt="" draggable="false">
-              <div class="deskripsi">
-                <p class="h2">DEADPOOL 1</p>
-                <p>Action, Adventure, Comedy, Mantap</p>
-                <a class="button-watch" href="">Watch</a>
-                <a class="button-add" href="">${icon({iconName: 'plus' }).html[0]}</a>
-              </div>
-            </div>
-          </li>
-          <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-            <div class="carousel__snapper"></div>
+    const carousel = document.createElement('div');
+    carousel.classList.add('carousel');
+    carousel.setAttribute('aria-label', 'Gallery')
+
+    const carouselViewport = document.createElement('ol');
+    carouselViewport.classList.add('carousel__viewport', 'horizontal-list');
+    carousel.appendChild(carouselViewport);
+    
+    this._movie.forEach(movie => {
+      const carouselSlide = document.createElement('li');
+      carouselSlide.classList.add('carousel__slide');
+      carouselSlide.setAttribute('tabindex', '0')
+  
+      carouselSlide.innerHTML = `
+          <div class="carousel__snapper"></div>
             <a href="#" class="carousel__prev">${icon({iconName: 'chevron-left' }).html[0]}</a>
-            <a href="#" class="carousel__next">${icon({iconName: 'chevron-right' }).html[0]}</i></a>
-            <div class="list-item">
-              <img src="../asset/jpg/image.jpg" width="100%" alt="" draggable="false">
-              <div class="deskripsi">
-                <p class="h2">DEADPOOL 2</p>
-                <p>Action, Adventure, Comedy, Mantap</p>
-                <a class="button-watch" href="">Watch</a>
-                <a class="button-add" href="">${icon({iconName: 'plus' }).html[0]}</i></a>
-              </div>
+            <a href="#" class="carousel__next">${icon({iconName: 'chevron-right' }).html[0]}</a>
+          <div class="list-item">
+            <img src="https://image.tmdb.org/t/p/w300${movie.backdrop_path}" width="100%" alt="" draggable="false">
+            <div class="deskripsi">
+              <p class="h2">${movie.original_title}</p>
+              <p>${movie.overview}</p>
+              <a class="button-watch" href="">Watch</a>
+              <a class="button-add" href="">${icon({iconName: 'plus' }).html[0]}</a>
             </div>
-          </li>
-          <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-            <div class="carousel__snapper"></div>
-            <a href="#" class="carousel__prev ">${icon({iconName: 'chevron-left' }).html[0]}</i></a>
-            <a href="#" class="carousel__next">${icon({iconName: 'chevron-right' }).html[0]}</i></a>
-            <div class="list-item">
-              <img src="../asset/jpg/image.jpg" width="100%" alt="" draggable="false">
-              <div class="deskripsi">
-                <p class="h2">DEADPOOL 3</p>
-                <p>Action, Adventure, Comedy, Mantap</p>
-                <a class="button-watch" href="">Watch</a>
-                <a class="button-add" href="">${icon({iconName: 'plus' }).html[0]}</i></a>
-              </div>
-            </div>
-          </li>
-          <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-            <div class="carousel__snapper"></div>
-            <a href="#" class="carousel__prev">${icon({iconName: 'chevron-left' }).html[0]}</i></a>
-            <div class="list-item">
-              <img src="../asset/jpg/image.jpg" width="100%" alt="" draggable="false">
-              <div class="deskripsi">
-                <p class="h2">DEADPOOL 4</p>
-                <p>Action, Adventure, Comedy, Mantap</p>
-                <a class="button-watch" href="">Watch</a>
-                <a class="button-add" href="">${icon({iconName: 'plus' }).html[0]}</i></a>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    `;
+          </div>
+      `
+  
+      carouselViewport.appendChild(carouselSlide);
+    });
+
+    this.shadowDOM.appendChild(carousel);
 
     const carouselLeft = this.shadowDOM.querySelectorAll('.carousel__prev');
     for(const button of carouselLeft){
@@ -94,7 +67,7 @@ class CarouselImage extends HTMLElement{
         list.scrollLeft += list.clientWidth;
       });
     }
-  };
-};
+  }
+}
 
 customElements.define('carousel-image', CarouselImage);
